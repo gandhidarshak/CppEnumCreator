@@ -13,7 +13,7 @@ This project developes an easy/intuitive method to define/declare enum class typ
 The code is tested on Linux/Windows-Cygwin gcc-6.2.0. However, It should work on any recent C++ compilers that supports C++ 11 or above. I have purposefully avoided dependencies on special purpose  libraries like Boost to make it self sufficient and easy to use. 
 
 ### Installation 
-Installation is quite simple, just download the .h files from [src dir] (https://github.com/gandhidarshak/CppEnumCreator/tree/master/src/) from git hub and keep it in a location which is accessible from your project.  
+Installation is quite simple, just download the .h files from [src dir](https://github.com/gandhidarshak/CppEnumCreator/tree/master/src/) from git hub and keep it in a location which is accessible from your project.  
 
 ### Usage
 The enum creation works in 2 steps - declaration/definition, like most other code that you will write between header and c++ file.
