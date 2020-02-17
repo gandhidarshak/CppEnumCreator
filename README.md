@@ -17,13 +17,13 @@ Installation is quite simple, just download the .h files from [src dir](https://
 
 ### Usage
 The enum creation works in 2 steps - declaration/definition, like most other code that you will write between header and c++ file.
-*   header file - declaration:
+1.  header file - declaration:
 Inside your header file, inside the class/namespace declaration {...}, where you will normally define enums, #define below macros. And #include  "CppEnumCreatorDeclaration.h" after that. The files uses standard C++ includes, but if needed, you can also #include "CppEnumCreatorIncludes.h" at top of your header file.
     1.  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
     2.  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
     3.  CppEnumList <Comma separated list of enum-items. Use \ for multine line spliting.>
     4.  CppDllExportMacro <Name of the dll export/import macro if working across dlls in windows.> (optional)
-*   C++ file - definition:
+2.  C++ file - definition:
 Inside your c++ file, where you will normally define class APIs or enum APIs, copy below two macros from the header file above. And #include  "CppEnumCreatorDefinition.h" after that.
     1.  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
     2.  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
@@ -38,12 +38,13 @@ After the above two steps, upone compilation, you will automatically have below 
 7.  prefix increment (\++x) operator
 8.  postfix increment (x++) operator
 9.  ostream << operator 
-10.  num_enum_items
-    *unsigned short is used as underlying number representation of enum
+10. num_enum_items
+
+*unsigned short is used as underlying number representation of enum
 
 
 
-Please see [test.h](https:/d/github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.h) and [test.cxx](https://github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.cxx) files for a more detailed example of the usage. 
+Please see [test.h](https://github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.h) and [test.cxx](https://github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.cxx) files for a more detailed example of the usage. 
 
 ### Sharing is caring!
 
