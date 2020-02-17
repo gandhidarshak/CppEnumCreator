@@ -1,0 +1,24 @@
+Enum Digits has 10 items.
+Iterating over enums using increment(++) operator:
+ enumAsInt enumAsString
+         0 Zero
+         1 One
+         2 Two
+         3 Three
+         4 Four
+         5 Five
+         6 Six
+         7 Seven
+         8 Eight
+         9 Nine
+Enum Days has 7 items.
+Iterating over enums using increment(++) operator:
+ enumAsInt enumAsString
+         0 Monday
+         1 Tuesday
+         2 Wednesday
+         3 Thursday
+         4 Friday
+         5 Saturday
+         6 Sunday
+Example of using << operator for enum: Sunday
