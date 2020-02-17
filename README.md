@@ -17,31 +17,33 @@ Installation is quite simple, just download the .h files from [src dir](https://
 
 ### Usage
 The enum creation works in 2 steps - declaration/definition, like most other code that you will write between header and c++ file.
-   1. header file - declaration:
-         Inside your header file, inside the class/namespace declaration {...}, where you will normally define enums, #define below macros. And #include  "CppEnumCreatorDeclaration.h" after that. The files uses standard C++ includes, but if needed, you can also #include "CppEnumCreatorIncludes.h" at top of your header file.
-            *  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
-            *  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
-            *  CppEnumList <Comma separated list of enum-items. Use \ for multine line spliting.>
-            *  CppDllExportMacro <Name of the dll export/import macro if working across dlls in windows.>
-   2. C++ file - definition:
-         Inside your c++ file, where you will normally define class APIs or enum APIs, copy below two macros from the header file above. And #include  "CppEnumCreatorDefinition.h" after that.
-            *  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
-            *  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
+*   header file - declaration:
+Inside your header file, inside the class/namespace declaration {...}, where you will normally define enums, #define below macros. And #include  "CppEnumCreatorDeclaration.h" after that. The files uses standard C++ includes, but if needed, you can also #include "CppEnumCreatorIncludes.h" at top of your header file.
+    1.  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
+    2.  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
+    3.  CppEnumList <Comma separated list of enum-items. Use \ for multine line spliting.>
+    4.  CppDllExportMacro <Name of the dll export/import macro if working across dlls in windows.> (optional)
+*   C++ file - definition:
+Inside your c++ file, where you will normally define class APIs or enum APIs, copy below two macros from the header file above. And #include  "CppEnumCreatorDefinition.h" after that.
+    1.  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
+    2.  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
 
-After the above two steps, upone compilation, you will automatically have below static APIs defined in your class or namespace.
-   1. string_to_enum
-   2. enum_to_string
-   3. ushort_to_enum (unsigned short is used as underlying number representation of enum)
-   4. enum_to_ushort, 
-   5. prefix decrement (--x) operator
-   6. postfix decrement (x--) operator
-   7. prefix increment (++x) operator
-   8. postfix increment (x++) operator
-   9. ostream << operator 
-   10. num_enum_items
+After the above two steps, upone compilation, you will automatically have below static APIs declared (in .h) and defined (in .c++) in your class or namespace.
+1.  string_to_enum
+2.  enum_to_string
+3.  ushort_to_enum* 
+4.  enum_to_ushort*
+5.  prefix decrement (--x) operator
+6.  postfix decrement (x--) operator
+7.  prefix increment (\++x) operator
+8.  postfix increment (x++) operator
+9.  ostream << operator 
+10.  num_enum_items
+    *unsigned short is used as underlying number representation of enum
 
 
-Please see [test.h](https://github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.h) and [test.cxx](https://github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.cxx) files for a more detailed example of the usage. 
+
+Please see [test.h](https:/d/github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.h) and [test.cxx](https://github.com/gandhidarshak/CppEnumCreator/blob/master/test/test.cxx) files for a more detailed example of the usage. 
 
 ### Sharing is caring!
 
