@@ -22,7 +22,7 @@ Inside your header file, inside the class/namespace declaration {...}, where you
     1.  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>
     2.  CppEnumName <Name of the enum class - e.g. Digits, Colors, Months>
     3.  CppEnumList <Comma separated list of enum-items. Use \ for multine line spliting.>
-    4.  CppDllExportMacro <Name of the dll export/import macro if working across dlls in windows.> (optional)
+    4.  CppEnumCreatorDllExportMacro <Name of the dll export/import macro if working across dlls in windows.> (optional)
 2.  C++ file - definition:
 Inside your c++ file, where you will normally define class APIs or enum APIs, copy below two macros from the header file above. And #include  "CppEnumCreatorDefinition.h" after that.
     1.  CppEnumParentClass <Name of the class/namespace - e.g. classA, namespaceB, namespaceC::ClassA>

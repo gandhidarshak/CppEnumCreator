@@ -4,7 +4,7 @@ class Foo {
    public:
 
       // Declare Enum List
-#define CppDllExportMacro /* give declspec macro's name if defined */
+#define CppEnumCreatorDllExportMacro /* give declspec macro's name if defined */
 #define CppEnumParentClass Foo
 #define CppEnumName Digits
 #define CppEnumList \
@@ -26,7 +26,7 @@ class Foo {
 namespace Bar {
 
       // Declare Enum List
-#define CppDllExportMacro /* give declspec macro's name if defined */
+#define CppEnumCreatorDllExportMacro /* give declspec macro's name if defined */
 // #define CppEnumParentClass - Don't define ParentClass as this enum resides directly in a namespace
 #define CppEnumName Days 
 #define CppEnumList \
