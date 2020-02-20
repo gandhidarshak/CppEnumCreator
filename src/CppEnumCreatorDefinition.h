@@ -6,18 +6,6 @@
 #error "Please define CppEnumName macro before including CppEnumDefinitionCreator.h file."
 #endif
 
-/*
-#ifndef CppStringify
-#define CppStringify_(...) #__VA_ARGS__
-#define CppStringify(x) CppStringify_(x)
-#endif
-
-#ifndef CppConcatenate
-#define CppConcatenate_(x,y) x ## y
-#define CppConcatenate(x,y) CppConcatenate_(x,y)
-#endif
-*/
-
 #ifdef CppEnumAsCSV
 #error "Please un-define CppEnumAsCSV macro before including CppEnumDefinitionCreator.h file."
 #else

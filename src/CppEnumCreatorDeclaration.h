@@ -2,8 +2,8 @@
 // Note: Don't put compiler guard in this file.
 //------------------------------------------------------------------------------
 
-#ifndef CppDllExportMacro
-#define CppDllExportMacro /*No Dll Export?*/
+#ifndef CppEnumCreatorDllExportMacro
+#define CppEnumCreatorDllExportMacro /*No Dll Export?*/
 #endif
 
 #ifndef CppEnumName
@@ -47,26 +47,26 @@ static constexpr const char* CppEnumAsCSV =
    ", NumItems";
 
 // enum/unsigned short/string conversions
-CppDllExportMacro static void enum_to_ushort (const CppEnumName e, unsigned short& i);
-CppDllExportMacro static void ushort_to_enum (const unsigned short i, CppEnumName& e);
-CppDllExportMacro static void enum_to_string (const CppEnumName e, std::string& s);
-CppDllExportMacro static void string_to_enum (const std::string& s, CppEnumName& e);
+CppEnumCreatorDllExportMacro static void enum_to_ushort (const CppEnumName e, unsigned short& i);
+CppEnumCreatorDllExportMacro static void ushort_to_enum (const unsigned short i, CppEnumName& e);
+CppEnumCreatorDllExportMacro static void enum_to_string (const CppEnumName e, std::string& s);
+CppEnumCreatorDllExportMacro static void string_to_enum (const std::string& s, CppEnumName& e);
 
 // prefix/postfix operator ++/-- (++e, e++, --e, e++)
-CppDllExportMacro CppFriendClassifier CppEnumName& operator++(CppEnumName& e); // ++prefix
-CppDllExportMacro CppFriendClassifier CppEnumName& operator--(CppEnumName& e); // --prefix
-CppDllExportMacro CppFriendClassifier CppEnumName  operator++(CppEnumName& e, int); // postfix++
-CppDllExportMacro CppFriendClassifier CppEnumName  operator--(CppEnumName& e, int); // postfix--
+CppEnumCreatorDllExportMacro CppFriendClassifier CppEnumName& operator++(CppEnumName& e); // ++prefix
+CppEnumCreatorDllExportMacro CppFriendClassifier CppEnumName& operator--(CppEnumName& e); // --prefix
+CppEnumCreatorDllExportMacro CppFriendClassifier CppEnumName  operator++(CppEnumName& e, int); // postfix++
+CppEnumCreatorDllExportMacro CppFriendClassifier CppEnumName  operator--(CppEnumName& e, int); // postfix--
 
 // << operator
-CppDllExportMacro CppFriendClassifier std::ostream& operator<<( std::ostream& out, const CppEnumName& e );
+CppEnumCreatorDllExportMacro CppFriendClassifier std::ostream& operator<<( std::ostream& out, const CppEnumName& e );
 
 // NumItems
-CppDllExportMacro static unsigned short num_enum_items(CppEnumName& e);
+CppEnumCreatorDllExportMacro static unsigned short num_enum_items(CppEnumName& e);
 
 #undef CppEnumName
 #undef CppEnumList
 #undef CppEnumAsCSV
-#undef CppDllExportMacro
+#undef CppEnumCreatorDllExportMacro
 #undef CppEnumParentClass
 #undef CppFriendClassifier
