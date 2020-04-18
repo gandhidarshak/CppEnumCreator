@@ -2,6 +2,10 @@
 // Note: Don't put compiler guard in this file.
 //------------------------------------------------------------------------------
 
+#include <iostream>
+#include <vector>
+#include <mutex>
+
 #ifndef CppEnumName
 #error "Please define CppEnumName macro before including CppEnumDefinitionCreator.h file."
 #endif
